@@ -56,7 +56,7 @@ export default function Header() {
           </li>
         </ul>
 
-        <button className="btn-close" onClick={hideNavbar}>
+        <button className="btn btn-close" onClick={hideNavbar}>
           <RiCloseLargeLine />
         </button>
         <div className="nav-social">
@@ -96,7 +96,7 @@ export default function Header() {
           <FaTwitter />
         </a>
       </div>
-      <button className="btn-menu" onClick={showNavbar}>
+      <button className="btn btn-menu" onClick={showNavbar}>
         <RiMenu3Line />
       </button>
     </header>
