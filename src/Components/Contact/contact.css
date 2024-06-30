@@ -77,14 +77,16 @@
     border-color: var(--white-color);
 }
 
+
 .c-btn {
     width: 100%;
     padding: 15px;
+    color: var(--White-color);
     border: 2px solid var(--first-color);
     border-radius: 10px;
     text-align: center;
     font-size: 18px;
-    transition: all 0.6s ease-in-out;
+    transition: all .6s ease-in-out;
 }
 
 .c-btn:hover {

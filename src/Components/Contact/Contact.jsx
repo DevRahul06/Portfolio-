@@ -73,10 +73,10 @@ export default function Contact() {
                 />
               </div>
 
-              <div className="c-btns ">
-                <button className="c-btn" type="submit" color="white">
-                  Submit
-                </button>
+              <div className="c-btns">
+                <a className="c-btn" type="submit">
+                  Send Message
+                </a>
               </div>
             </form>
           </div>
