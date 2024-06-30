@@ -1,8 +1,37 @@
-import React from "react";
+import React, { useRef } from "react";
 import contactImage from "../../assets/images/contact-img.svg";
 import "./contact.css";
+import emailjs from "@emailjs/browser";
 
 export default function Contact() {
+
+  const formref = useRef()
+
+  const serviceId = "service_e926qeo";
+  const templateId = "template_2swgx0i";
+  const publicKey = "G3PCGRetAKvAunpX2";
+
+  
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+    .sendForm(serviceId, templateId, formref.current, {
+      publicKey: publicKey,
+    })
+    .then(
+      () => {
+        
+      },
+      (error) => {
+        
+      },
+    );
+
+    e.target.reset()
+  };
+
   return (
     <React.Fragment>
       <section class="contact" id="contact">
@@ -14,22 +43,24 @@ export default function Contact() {
               fill out the form below and I will get back to you as soon as
               possible.
             </p>
-            <form className="contact-form" data-aos="fade-up">  
+            <form ref={formref}
+              onSubmit={sendEmail}
+              className="contact-form"
+              data-aos="fade-up"
+            >
               <div className="fileds">
-                <label htmlFor="name" className="label">
+                <label htmlFor="from_name" className="label">
                   Name
                 </label>
-                <input type="text" className="input" placeholder="Enter Name" />
+                <input type="text" required className="input" name="from_name" placeholder="Enter Name" 
+                />
               </div>
 
               <div className="fileds">
-                <label htmlFor="name" className="label">
+                <label htmlFor="from_email" className="label">
                   Email
                 </label>
-                <input
-                  type="email"
-                  className="input"
-                  placeholder="abc@gmail.com"
+                <input required type="email" className="input" name="from_email" placeholder="abc@gmail.com" 
                 />
               </div>
 
@@ -37,18 +68,15 @@ export default function Contact() {
                 <label htmlFor="name" className="label">
                   Message
                 </label>
-                <textarea
-                  type="text"
-                  rows="8"
-                  className="input"
-                  placeholder="Type something here...."
+                <textarea type="text" rows="8" name="message" className="input" placeholder="Type something here...." 
+                        
                 />
               </div>
 
               <div className="c-btns ">
-                <a href="" className="c-btn" type="submit">
+                <button className="c-btn" type="submit" color="white">
                   Submit
-                </a>
+                </button>
               </div>
             </form>
           </div>
