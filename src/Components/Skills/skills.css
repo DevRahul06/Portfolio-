@@ -1,0 +1,146 @@
+.skills {
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4rem;
+    justify-content: center;
+}
+
+.skills-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 2rem;
+}
+
+.skills-title {
+    width: 100%;
+    position: relative;
+    color: var(--first-color);
+    text-align: center;
+    font-size: 3.5rem;
+}
+
+.skills-title::before {
+    content: "";
+    position: absolute;
+    height: 2.5px;
+    width: 100%;
+    left: 0;
+    bottom: -0.5rem;
+    background: var(--white-color);
+}
+
+.skills-name {
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.s-card {
+    padding: 25px 15px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    gap: 10px;
+    border: 2px solid var(--text-color);
+    border-radius: 8px;
+    transition: all 0.5s ease-out;
+}
+
+.s-icon {
+    font-size: 2.5rem;
+}
+
+.s-name {
+    font-size: 1.2rem;
+}
+
+
+.react-icon {
+    color: var(--first-color);
+    animation: circle 5s linear infinite;
+}
+
+
+@keyframes circle {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.skills-bar {
+    display: grid;
+    align-items: center;
+    column-gap: 20px;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.s-line {
+    /* align-items: center; */
+    padding: 10px;
+    border: 2px solid var(--text-color);
+    margin: 10px 0 0 0;
+    border-radius: 8px;
+    width: 100%;
+    transition: all 0.5s ease-out;
+
+}
+
+.s-line-name {
+    margin-bottom: 3px;
+    font-size: 0.8rem;
+}
+
+.s-card:hover,.s-line:hover{
+    border: 2px solid var(--white-color);
+}
+
+@media only screen and (max-width: 1024px) {
+
+    .skills{
+        height: 100%;
+    }
+    .skills-name {
+        /* padding: 25px 20px; */
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+}
+
+@media only screen and (max-width: 768px) {
+    .skills-container{
+        grid-template-columns: 1fr;
+    }
+    .skills-name {
+        grid-template-columns: repeat(4 , 1fr);
+    }
+
+    .skills-bar {
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    .skills{
+        height: 100%;
+    }
+
+    .skills-container {
+        grid-template-columns: 1fr;
+        /* column-gap: 2rem; */
+    }
+    .skills-name {
+        grid-template-columns: repeat(2 , 1fr);
+    }
+
+    .skills-bar {
+        grid-template-columns: repeat(1,1fr);
+    }
+}

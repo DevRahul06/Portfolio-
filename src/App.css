@@ -1,0 +1,45 @@
+/* 
+@media only screen and (max-width: 992px) {
+    .header .btn{
+        display: flex;
+        opacity: 1;
+    }
+
+    .nav-social{
+        display: flex;
+    }
+    .social{
+        display: none;
+    }
+
+    .header .navbar{
+        z-index: 1;
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1.5rem;
+        background-color: var(--body-color);
+        transition: 1s;
+        transform: translateY(-100vh);
+    }
+
+    .nav-lsit{
+        flex-direction:column  ;
+    }
+
+    .header .active{
+        transform: none;
+    }
+
+    .btn-close{
+        position: absolute;
+        top: 2rem;
+        right: 2rem;
+    }
+} */
