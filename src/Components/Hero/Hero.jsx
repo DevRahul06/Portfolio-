@@ -26,9 +26,9 @@ export default function Hero() {
             initial="hidden"
             animate="visible"
           >
-            <p class="hero-subtitle">
+            <h4 class="hero-subtitle">
               Hi, I'm &nbsp; <span className="tc">DevRahul</span>
-            </p>
+            </h4>
             <h2 class="h2 hero-title">
               <span className="stc">Front</span>end Developer
             </h2>

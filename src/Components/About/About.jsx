@@ -1,26 +1,21 @@
-import React, {useEffect} from "react";
+import React from "react";
 import "./about.css";
 import { FaInstagram, FaGithub, FaTwitter } from "react-icons/fa";
 import AboutImg from "../../assets/images/about--svg.png";
-import CV from "../../assets/pdfs/Rahul_Resume.pdf"
+import CV from "../../assets/pdfs/Rahul_Resume.pdf";
 import Aos from "aos";
-import 'aos/dist/aos.css'
-
-
-
+import "aos/dist/aos.css";
 
 export default function About() {
-
   Aos.init({
     duration: 700,
     easing: "ease-in",
-    anchorPlacement:"top-bottom",
-  })
-
+    anchorPlacement: "top-bottom",
+  });
 
   return (
     <section className="about" id="about">
-      <div   className="about-container">
+      <div className="about-container">
         <figure data-aos="fade-right" className="about-banner">
           <img
             src={AboutImg}
@@ -31,7 +26,9 @@ export default function About() {
         </figure>
 
         <div className="about-content">
-          <h2 class="h2 about-title" data-aos="fade-up">About Me</h2>
+          <h2 class="h2 about-title" data-aos="fade-up">
+            About Me
+          </h2>
           <p className="about-text" data-aos="fade-up">
             Hello! I'm a frontend developer based in Ahmedabad, Gujarat, with
             one year of experience in creating user-friendly and responsive web
@@ -42,7 +39,7 @@ export default function About() {
             to life!
           </p>
 
-          <div className="btns about-btns"  data-aos="fade-up" >
+          <div className="btns about-btns" data-aos="fade-up">
             <a href={CV} download className="btn about-btn">
               Resume
             </a>

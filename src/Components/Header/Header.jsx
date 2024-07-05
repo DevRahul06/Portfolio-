@@ -33,7 +33,7 @@ export default function Header() {
 
           <li className="nav-item">
             <a href="#about" className="nav-link">
-              about
+              About
             </a>
           </li>
 
