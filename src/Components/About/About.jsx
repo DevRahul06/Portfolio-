@@ -2,7 +2,7 @@ import React from "react";
 import "./about.css";
 import { FaInstagram, FaGithub, FaTwitter } from "react-icons/fa";
 import AboutImg from "../../assets/images/about--svg.png";
-import CV from "../../assets/pdfs/Rahul_Resume.pdf";
+import CV from "../../assets/pdfs/Rahul_CV.pdf";
 import Aos from "aos";
 import "aos/dist/aos.css";
 
